@@ -3,7 +3,7 @@ Tensorflow implementation of attention mechanisms for image captioning
 
 <p align="center">
   <br><br>
-  <img src="images/46v22h.gif"><br>
+  <img src="images/output_7qp0au.gif"><br>
   <!--b>This is the look of the Live Visualizer</b!-->
   <!--br><br><br><br><br><br>
   <img src="data/upload.gif"><br>
