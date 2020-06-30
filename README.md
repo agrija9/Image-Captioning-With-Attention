@@ -40,7 +40,7 @@ scp /home/hackerman/Documents/Alan-Git-Repositories/Natural-Language-Processing/
 
 ```
 
-In the above line I have copied the script ```main.py``` from my local PC into my cluster folder. 
+In the above line I have copied the script ```main.py``` from my local PC into my cluster folder. ***Make sure to provide the correct path to the script in your local PC***.
 
 You have to copy the rest of the scripts similarly. The ***cluster_transfer_data.txt*** has the command line instructions to do it. 
 
