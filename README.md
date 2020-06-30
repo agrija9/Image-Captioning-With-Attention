@@ -11,7 +11,7 @@ ssh user2s@wr0.wr.inf.h-brs.de
 
 ```
 
-user2s is your own student identifier. After that type your cluster password and you'll be logged in the cluser.
+user2s is your own student identifier. After that type your cluster password and you'll be logged on to the cluser.
 
 ## Install Anaconda in H-BRS cluster
 
