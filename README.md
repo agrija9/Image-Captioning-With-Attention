@@ -111,6 +111,11 @@ At this point everything is ready to run the program by submitting a job in the 
 
 The above parameters are set by default to run a job that takes around 10 minutes. 
 
+Submit the job doing 
 
+```
+sbatch image_caption.sh
+```
 
+You can monitor the progress of training by opening the ```job_image_caption.err``` and ```job_image_caption.out``` files. 
 
