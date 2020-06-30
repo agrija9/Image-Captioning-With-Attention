@@ -24,6 +24,14 @@ mkdir temporal
 
 Then proceed with the Anaconda installation in your cluster account. [Install Anaconda in Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-install-anaconda-on-ubuntu-18-04-quickstart).
 
+## Install dependencies
+
+Once Anaconda has been installed in your cluster account, create an anaconda environment (in this case we are naming the environment NLP to exemplify)
+
+```
+conda create -n NLP python=3.6
+```
+
 ## Copy python scripts to H-BRS cluster
 
 In your cluster home folder, create a main directory to store the python scripts
@@ -40,7 +48,9 @@ scp /home/hackerman/Documents/Alan-Git-Repositories/Natural-Language-Processing/
 
 ```
 
-In the above line I have copied the script ```main.py``` from my local PC into my cluster folder. ***Make sure to provide the correct path to the script in your local PC***.
+In the above line I have copied the script ```main.py``` from my local PC into my cluster folder. **Make sure to provide the correct path to the script in your local PC**.
 
-You have to copy the rest of the scripts similarly. The ***cluster_transfer_data.txt*** has the command line instructions to do it. 
+You have to copy the rest of the scripts similarly. The **cluster_transfer_data.txt** has the command line instructions to do it.
+
+
 
