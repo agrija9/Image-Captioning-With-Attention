@@ -1,0 +1,47 @@
+#########################################################################################
+COPY SCRIPTS FROM PC TO CLUSTER
+
+coco.py
+scp /home/hackerman/Documents/Alan-Git-Repositories/Natural-Language-Processing/Project/coco.py apreci2s@wr0.wr.inf.h-brs.de:/home/apreci2s/Image_captioning
+
+-----------------------------------------------------------------------------------------
+loss.py
+scp /home/hackerman/Documents/Alan-Git-Repositories/Natural-Language-Processing/Project/loss.py apreci2s@wr0.wr.inf.h-brs.de:/home/apreci2s/Image_captioning
+
+-----------------------------------------------------------------------------------------
+main.py
+scp /home/hackerman/Documents/Alan-Git-Repositories/Natural-Language-Processing/Project/main.py apreci2s@wr0.wr.inf.h-brs.de:/home/apreci2s/Image_captioning
+
+-----------------------------------------------------------------------------------------
+model.py
+scp /home/hackerman/Documents/Alan-Git-Repositories/Natural-Language-Processing/Project/model.py apreci2s@wr0.wr.inf.h-brs.de:/home/apreci2s/Image_captioning
+
+-----------------------------------------------------------------------------------------
+train.py
+scp /home/hackerman/Documents/Alan-Git-Repositories/Natural-Language-Processing/Project/train.py apreci2s@wr0.wr.inf.h-brs.de:/home/apreci2s/Image_captioning
+
+-----------------------------------------------------------------------------------------
+utils.py
+scp /home/hackerman/Documents/Alan-Git-Repositories/Natural-Language-Processing/Project/utils.py apreci2s@wr0.wr.inf.h-brs.de:/home/apreci2s/Image_captioning
+
+-----------------------------------------------------------------------------------------
+evaluate.py
+scp /home/hackerman/Documents/Alan-Git-Repositories/Natural-Language-Processing/Project/evaluate.py apreci2s@wr0.wr.inf.h-brs.de:/home/apreci2s/Image_captioning
+
+
+#########################################################################################
+COPY SCRIPTS FROM CLUSTER TO PC
+
+job.out
+scp apreci2s@wr0.wr.inf.h-brs.de:/home/apreci2s/Image_captioning/jobs/job_cnn_rnn.out /home/hackerman/Documents/Alan-Git-Repositories/Natural-Language-Processing/Project/jobs_logs/
+
+checkpoints
+scp apreci2s@wr0.wr.inf.h-brs.de:/home/apreci2s/Image_captioning/checkpoints/train/* /home/hackerman/Documents/Alan-Git-Repositories/Natural-Language-Processing/Project/checkpoints/train
+
+attention and loss plot
+scp apreci2s@wr0.wr.inf.h-brs.de:/home/apreci2s/Image_captioning/results/* /home/hackerman/Documents/Alan-Git-Repositories/Natural-Language-Processing/Project/results/
+
+#########################################################################################
+RUN JOB
+
+sbatch CNN_RNN_model.sh
