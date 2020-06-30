@@ -119,3 +119,9 @@ sbatch image_caption.sh
 
 You can monitor the progress of training by opening the ```job_image_caption.err``` and ```job_image_caption.out``` files. 
 
+## Training model
+
+https://github.com/tensorflow/docs/blob/master/site/en/tutorials/text/image_captioning.ipynb
+
+## Retrieve results and model parameters from cluster to local PC
+
