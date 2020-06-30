@@ -94,7 +94,7 @@ def main(COCO):
 
     # select first n captions from shuffled dataset
     # num_examples = 60000
-    num_examples = 30000
+    num_examples = 3000
     train_captions = train_captions[:num_examples]
     train_img_names = train_img_names[:num_examples]
 
