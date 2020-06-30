@@ -66,7 +66,7 @@ mkdir jobs
 
 This folder will contain the sh file that will execute the job in the cluster.
 
-Now creat an .sh file via
+Create in this folder an .sh file using the vim command
 
 ```
 vim image_caption.sh
@@ -102,7 +102,14 @@ The above is setting the gpu partition, activating the ```NLP``` Anaconda enviro
 
 This will tell the program to compute image features using a pre-trained InceptionV3 model from tensorflow. These image features are necessary since they're the input to the decoder together with captions. 
 
+At this point everything is ready to run the program by submitting a job in the cluster. Before this, you can modify some of the main parameters of the program, these are found in the ```main.py``` script
 
+* EPOCHS
+* BATCH_SIZE
+* top_k (top words in the vocabulary)
+* num_examples (number of captions and images to train the neural network)
+
+The above parameters are set by default to run a job that takes around 10 minutes. 
 
 
 
