@@ -22,8 +22,16 @@ mkdir temporal
 
 ```
 
-Then proceed to run the Anaconda installation in your cluster account as usual. [Install Anaconda in Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-install-anaconda-on-ubuntu-18-04-quickstart)
+Then proceed with the Anaconda installation in your cluster account. [Install Anaconda in Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-install-anaconda-on-ubuntu-18-04-quickstart).
 
+## Transfer scripts to H-BRS cluster
+
+In your cluster home folder, create a main directory to store the python scripts
+
+```
+mkdir image_captioning
+
+```
 
 
 
