@@ -121,7 +121,9 @@ You can monitor the progress of training by opening the ```job_image_caption.err
 
 ## Training model
 
-https://github.com/tensorflow/docs/blob/master/site/en/tutorials/text/image_captioning.ipynb
+This implementation is closely related to the tensorflow tutorial for [image captioning] (https://github.com/tensorflow/docs/blob/master/site/en/tutorials/text/image_captioning.ipynb). This repository introduces separate modules to have a more scalable and organized implementation. The neural network model that the tutorial implements is based on the [show, attend and tell paper](https://arxiv.org/abs/1502.03044) by Bengio et. al (2015).
+
+
 
 ## Retrieve results and model parameters from cluster to local PC
 
