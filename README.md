@@ -40,5 +40,7 @@ scp /home/hackerman/Documents/Alan-Git-Repositories/Natural-Language-Processing/
 
 ```
 
+In the above line I have copied the script ```main.py``` from my local PC into my cluster folder. 
 
+You have to do the above for the rest of the scripts. 
 
