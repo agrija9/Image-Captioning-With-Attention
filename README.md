@@ -89,15 +89,21 @@ source ~/anaconda3/bin/activate ~/anaconda3/envs/NLP
 
 module load cuda
 
-cd /home/apreci2s/Image_captioning
+cd /home/user2s/image_captioning
 
 python main.py
 
 ```
 
-The above is setting the gpu partition, activating the ```NLP``` Anaconda environment and running the ```main.py``` script. We have added the ```.sh``` file in this repository as well in case you want to transfer it directly via ```scp``` to the cluster.
+The above is setting the gpu partition, activating the ```NLP``` Anaconda environment and running the ```main.py``` script. We have added the ```.sh``` file in this repository as well in case you want to transfer it directly via ```scp``` to the cluster. Make sure to edit your username in the line ```cd /home/user2s/image_captioning```
 
-**NOTE:**
+
+**NOTE:** If it is the first time you run the program, make sure to add the following argument to the bash script: ```python main.py --cache_inception_features True```
+
+This will tell the program to compute image features using a pre-trained InceptionV3 model from tensorflow. These image features are necessary since they're the input to the decoder together with captions. 
+
+
+
 
 
 
