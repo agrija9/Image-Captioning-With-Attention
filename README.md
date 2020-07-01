@@ -148,3 +148,16 @@ In your project's ```jobs_logs``` directory copy the terminal output of your mod
 scp apreci2s@wr0.wr.inf.h-brs.de:/home/apreci2s/image_captioning/jobs/image_caption.out /home/hackerman/Documents/Alan-Git-Repositories/Natural-Language-Processing/Project/jobs_logs/
 
 ```
+
+Retrieve model parameters (weights)
+
+```
+scp apreci2s@wr0.wr.inf.h-brs.de:/home/apreci2s/image_captioning/checkpoints/train/* /home/hackerman/Documents/Alan-Git-Repositories/Natural-Language-Processing/Project/checkpoints/train
+```
+
+Retrieve model results (attention and loss plot)
+
+```
+scp apreci2s@wr0.wr.inf.h-brs.de:/home/apreci2s/image_captioning/results/* /home/hackerman/Documents/Alan-Git-Repositories/Natural-Language-Processing/Project/results/
+
+```
