@@ -5,6 +5,8 @@ import tensorflow as tf
 - Architecture based on show, attend and tell paper
 """
 
+# NOTE: this model extracted from the following tensorflow tutorial https://github.com/tensorflow/docs/blob/master/site/en/tutorials/text/image_captioning.ipynb
+
 class BahdanauAttention(tf.keras.Model):
     def __init__(self, units):
         super(BahdanauAttention, self).__init__()
