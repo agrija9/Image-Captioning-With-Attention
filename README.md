@@ -35,8 +35,13 @@ The general procedure for data processing and training is as follows:
 
 ## Caption generation
 
+ * Once trained, the procedure for caption generation is very similar to training 
+ * Input image feature into CNN encoder
+ * Don't use teacher forcing, the inputs to the decoder at each time are the previous predictions
+ * Stop prediction when reaching <end> token
+  * Store **attention weights** at every time step
 -----------------------------------------------------------
-This repository is the implementation of the [Show, Attend and Tell](https://arxiv.org/abs/1502.03044) paper. The next sections describe the instructions to train the model on a GPU cluster. 
+The next sections describe the instructions to train the model on a GPU cluster. 
 
 ## Access H-BRS cluster
 
