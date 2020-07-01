@@ -10,7 +10,34 @@ Tensorflow 2.0 implementation of image captioning using attention with COCO 2014
   <b>This shows the filtering of rostopics in the graph</b!-->
 </p>
 
-This repository is the implementation of the [Show, Attend and Tell](https://arxiv.org/abs/1502.03044) paper. It contains instructions to train the model on a GPU cluster. 
+-----------------------------------------------------------
+
+## Training model
+
+This implementation is closely related to the tensorflow tutorial for [image captioning](https://github.com/tensorflow/docs/blob/master/site/en/tutorials/text/image_captioning.ipynb). 
+
+This repository extends the tutorial by having separate script modules, this helps keeping a more maintainable and organized implementation. The neural network model implemented here is based on the [Show, attend and tell paper](https://arxiv.org/abs/1502.03044) by Bengio et. al (2015).
+
+The general procedure for data processing and training is as follows:
+
+ * Download COCO 2014 images and annotations. **Warning:** this loads 13GB of data into your system. 
+ * Preprocess images using an **InceptionV3** neural network with ImageNet pre-trained weights. Extract features from the last convolutional layer of the CNN network.
+ * Tokenize captions (by space)
+ * Limit vocabulary size to 20000 words (can be modified)
+ * Create word-to-index and index-to-word mappings to embed caption vectors
+ * Pad sequences to be the same size (to the longest one)
+ * Take the features from InceptionV3 and input them into a CNN encoder (which is a single fully connected layer)
+ * Pass into decoder: **encoder output**, **hidden state (initially zero)**, **decoder input (start token)** 
+ * Decoder returns prediction and decoder (hidden) state
+ * Use predictions and compare with real captions to compute loss
+ * Use **teacher forcing** to decide next input word to decoder (feed words in order while training a.k.a pass target word as the next input in decoder)
+ * Calculate gradients, apply optimizer and backpropagate
+
+## Caption generation
+
+-----------------------------------------------------------
+This repository is the implementation of the [Show, Attend and Tell](https://arxiv.org/abs/1502.03044) paper. The next sections describe the instructions to train the model on a GPU cluster. 
+
 ## Access H-BRS cluster
 
 Open a terminal to access the cluster
@@ -127,27 +154,6 @@ sbatch image_caption.sh
 ```
 
 You can monitor the progress of training by opening the ```job_image_caption.err``` and ```job_image_caption.out``` files. 
-
-## Training model
-
-This implementation is closely related to the tensorflow tutorial for [image captioning](https://github.com/tensorflow/docs/blob/master/site/en/tutorials/text/image_captioning.ipynb). 
-
-This repository extends the tutorial by having separate script modules, this helps keeping a more maintainable and organized implementation. The neural network model implemented here is based on the [Show, attend and tell paper](https://arxiv.org/abs/1502.03044) by Bengio et. al (2015).
-
-The general procedure for data processing and training is as follows:
-
- * Download COCO 2014 images and annotations. **Warning:** this loads 13GB of data into your system. 
- * Preprocess images using an **InceptionV3** neural network with ImageNet pre-trained weights. Extract features from the last convolutional layer of the CNN network.
- * Tokenize captions (by space)
- * Limit vocabulary size to 20000 words (can be modified)
- * Create word-to-index and index-to-word mappings to embed caption vectors
- * Pad sequences to be the same size (to the longest one)
- * Take the features from InceptionV3 and input them into a CNN encoder (which is a single fully connected layer)
- * Pass into decoder: **encoder output**, **hidden state (initially zero)**, **decoder input (start token)** 
- * Decoder returns prediction and decoder (hidden) state
- * Use predictions and compare with real captions to compute loss
- * Use **teacher forcing** to decide next input word to decoder (feed words in order while training a.k.a pass target word as the next input in decoder)
- * Calculate gradients, apply optimizer and backpropagate
 
 ## Retrieve results and model parameters from cluster to local PC
 
