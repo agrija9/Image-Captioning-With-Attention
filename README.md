@@ -139,3 +139,12 @@ The general procedure for data processing and training is as follows:
 
 
 ## Retrieve results and model parameters from cluster to local PC
+
+Once the model is trained and captions have been generated, you can retrieve them to your local PC via the following commands
+
+In your project's ```jobs_logs``` directory copy the terminal output of your model 
+
+```
+scp apreci2s@wr0.wr.inf.h-brs.de:/home/apreci2s/image_captioning/jobs/image_caption.out /home/hackerman/Documents/Alan-Git-Repositories/Natural-Language-Processing/Project/jobs_logs/
+
+```
