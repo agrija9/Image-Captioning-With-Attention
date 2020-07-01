@@ -136,8 +136,14 @@ This repository extends the tutorial by having separate script modules, this hel
 
 The general procedure for data processing and training is as follows:
 
- * test 
-
+ * Download COCO 2014 images and annotations. **Warning:** this loads 13GB of data into your system. 
+ * Preprocess images using an **InceptionV3** neural network with ImageNet pre-trained weights. Extract features from the last convolutional layer of the CNN network.
+ * Tokenize captions (by space)
+ * Limit vocabulary size to 20000 words (can be modified)
+ * Create word-to-index and index-to-word mappings to embed caption vectors
+ * Pad sequences to be the same size (to the longest one)
+ * Take the features from InceptionV3 and input them into a CNN encoder (which is a single fully connected layer)
+ * 
 
 ## Retrieve results and model parameters from cluster to local PC
 
