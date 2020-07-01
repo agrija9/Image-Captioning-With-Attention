@@ -21,7 +21,7 @@ This repository extends the tutorial by having separate script modules, this hel
 The general procedure for data processing and training is as follows:
 
  * Download COCO 2014 images and annotations. **Warning:** this loads 13GB of data into your system. 
- * Preprocess images using an **InceptionV3** neural network with ImageNet pre-trained weights. Extract features from the last convolutional layer of the CNN network.
+ * Preprocess images using an **InceptionV3** neural network with ImageNet pre-trained weights. Extract features from the last convolutional layer of the CNN network. **Warning:** Generating features for 30,000 images takes about 14 GB of memory.
  * Tokenize captions (by space)
  * Limit vocabulary size to 20000 words (can be modified)
  * Create word-to-index and index-to-word mappings to embed caption vectors
@@ -39,9 +39,11 @@ The general procedure for data processing and training is as follows:
  * Input image feature into CNN encoder
  * Don't use teacher forcing, the inputs to the decoder at each time are the previous predictions
  * Stop prediction when reaching <end> token
-  * Store **attention weights** at every time step
+ * Store **attention weights** at every time step
+  
 -----------------------------------------------------------
-The next sections describe the instructions to train the model on a GPU cluster. 
+  
+The next sections describe the instructions to train the model on a GPU cluster. To **exemplify**, on a cluster using a Tesla V100 GPU card, it will take about 20 minutes to download the COCO 2014 dataset, it will take about 1 hour to fetch image features using InceptionV3 and it will take about 40 minutes to train the model and generate captions for 40 epochs and 30,000 images. 
 
 ## Access H-BRS cluster
 
