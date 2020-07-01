@@ -1,5 +1,5 @@
 # Image-Captioning-With-Attention
-Tensorflow implementation of attention mechanisms for image captioning
+Tensorflow implementation of image captioning using attention with COCO 2014 dataset.
 
 <p align="center">
   <br><br>
