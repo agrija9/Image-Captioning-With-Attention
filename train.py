@@ -10,6 +10,7 @@ from loss import loss_function
 - Teacher forcing is the technique where the target word is passed as the next input to the decoder.
 - The final step is to calculate the gradients and apply it to the optimizer and backpropagate.
 """
+# NOTE: this loss script is extracted from the following tensorflow tutorial https://github.com/tensorflow/docs/blob/master/site/en/tutorials/text/image_captioning.ipynb
 
 @tf.function
 def train_step(img_tensor, target, encoder, decoder, tokenizer, optimizer):
