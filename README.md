@@ -143,7 +143,11 @@ The general procedure for data processing and training is as follows:
  * Create word-to-index and index-to-word mappings to embed caption vectors
  * Pad sequences to be the same size (to the longest one)
  * Take the features from InceptionV3 and input them into a CNN encoder (which is a single fully connected layer)
- * 
+ * Pass into decoder: **encoder output**, **hidden state (initially zero)**, **decoder input (start token)** 
+ * Decoder returns prediction and decoder (hidden) state
+ * Use predictions and compare with real captions to compute loss
+ * Use **teacher forcing** to decide next input word to decoder (feed words in order while training a.k.a pass target word as the next input in decoder)
+ * Calculate gradients, apply optimizer and backpropagate
 
 ## Retrieve results and model parameters from cluster to local PC
 
