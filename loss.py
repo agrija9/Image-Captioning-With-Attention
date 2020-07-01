@@ -1,5 +1,7 @@
 import tensorflow as tf
 
+# NOTE: this loss extracted from the following tensorflow tutorial https://github.com/tensorflow/docs/blob/master/site/en/tutorials/text/image_captioning.ipynb
+
 def loss_function(real, pred):
     loss_object = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True, reduction='none')
 
