@@ -1,5 +1,5 @@
 # Image-Captioning-With-Attention
-Tensorflow implementation of image captioning using attention with COCO 2014 dataset.
+Tensorflow 2.0 implementation of image captioning using attention with COCO 2014 dataset
 
 <p align="center">
   <br><br>
@@ -10,6 +10,7 @@ Tensorflow implementation of image captioning using attention with COCO 2014 dat
   <b>This shows the filtering of rostopics in the graph</b!-->
 </p>
 
+This repository is the implementation of the [Show, Attend and Tell](https://arxiv.org/abs/1502.03044) paper. It contains instructions to train the model on a GPU cluster. 
 ## Access H-BRS cluster
 
 Open a terminal to access the cluster
