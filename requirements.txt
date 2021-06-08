@@ -1,6 +1,6 @@
 tensorflow==2.2.0
 scikit-learn
-Pillow==7.1.2
+Pillow==8.2.0
 json
 matplotlib
 numpy==1.18.5
